@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: athena-ai-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: SUPABASE_URL
+        value: https://zncsqjbdbfzbzjahormw.supabase.co
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false   # ← isi manual di Render dashboard (jangan hardcode!)
+      - key: ADMIN_EMAILS
+        value: riskyparama4546@gmail.com,kimlana269@gmail.com,kumenomikuroo@gmail.com
+      - key: FRONTEND_URL
+        value: https://athena-ai-tawny.vercel.app
